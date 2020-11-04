@@ -1,0 +1,19 @@
+<app-campo-wrapper [label]="label" [forId]="id" [classesCss]="classesCss" [control]="control">
+    <ng-container *ngIf="formControlName; else templateDriven">
+        <p-dropdown [id]="id" [options]="opcoes" [formControlName]="formControlName" 
+                    [filter]="filtro" [filterBy]="filtrarPor" [optionLabel]="labelOpcao" [dataKey]="dataKey"
+                    [placeholder]="placeholder" [filterPlaceholder]="filtroPlaceholder"
+                    [showClear]="true" emptyFilterMessage="Nenhum resultado encontrado!"
+                    (onChange)="registerOnChange($event.value)" [ngClass]="classeDefault"
+                    (onBlur)="registerOnTouched($event)"></p-dropdown>
+    </ng-container>
+    <ng-template #templateDriven>
+        <p-dropdown [id]="id" [options]="opcoes" [(ngModel)]="valorDoCampo"
+                    [filter]="filtro" [filterBy]="filtrarPor" [optionLabel]="labelOpcao" [dataKey]="dataKey"
+                    [placeholder]="placeholder" [filterPlaceholder]="filtroPlaceholder"
+                    [disabled]="disabled" [readonly]="readonly"
+                    [showClear]="true" emptyFilterMessage="Nenhum resultado encontrado!"
+                    (onChange)="registerOnChange($event.value)" [ngClass]="classeDefault"
+                    (onBlur)="registerOnTouched($event)"></p-dropdown>
+    </ng-template>
+</app-campo-wrapper>

@@ -1,0 +1,11 @@
+<app-campo-wrapper [label]="label" [forId]="id" [classesCss]="classesCss" [control]="control" [labelCampoErro]="labelCampoErro">
+	<ng-container *ngIf="formControlName ; else templateDriven">
+		<input pInputText [id]="id" [formControlName]="formControlName" on-focusout="registerOnTouched({})"
+			   autocomplete="nope" [placeholder]="placeholder" [type]="type" [ngClass]="classeDefault"
+			   [name]="name">
+	</ng-container>
+	<ng-template #templateDriven>
+		<input pInputText [id]="id" [name]="name" [(ngModel)]="valorDoCampo" on-focusout="registerOnTouched({})"
+			autocomplete="nope" [placeholder]="placeholder" [ngClass]="classeDefault">
+	</ng-template>
+</app-campo-wrapper>

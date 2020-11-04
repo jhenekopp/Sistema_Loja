@@ -1,0 +1,28 @@
+<app-campo-wrapper [label]="label" [forId]="id" [classesCss]="classesCss" [control]="control">
+	<ng-container *ngIf="formControlName ; else templateDriven">
+    <textarea pInputTextarea [id]="id" [name]="name" [formControlName]="formControlName" rows="5" #txtArea [placeholder]="placeholder"
+                  on-focusout="registerOnTouched({})" [autoResize]="autoResize" [ngClass]="classeDefault" 
+                  limiteCaracteres="limiteCaracteres"></textarea>
+		 <div class="clearfix">
+            <span style="float: right;" *ngIf="limiteCaracteres">
+                <span [ngClass]="classeCssLimiteCaracteresExcedido(txtArea)">
+                    {{txtArea.value?.length || 0}}
+                </span>
+                /{{limiteCaracteres}}
+            </span>
+        </div>
+	</ng-container>
+	<ng-template #templateDriven>
+    <textarea pInputTextarea [id]="id" [(ngModel)]="valorDoCampo" rows="5" #txtArea [name]="name" [placeholder]="placeholder"
+                  on-focusout="registerOnTouched({})" [autoResize]="autoResize" [ngClass]="classeDefault"
+                  limiteCaracteres="limiteCaracteres"></textarea>
+        <div class="clearfix">
+            <span style="float: right;" *ngIf="limiteCaracteres">
+                <span [ngClass]="classeCssLimiteCaracteresExcedido(txtArea)">
+                    {{txtArea.value?.length || 0}}
+                </span>
+                /{{limiteCaracteres}}
+            </span>
+        </div>
+	</ng-template>
+</app-campo-wrapper>

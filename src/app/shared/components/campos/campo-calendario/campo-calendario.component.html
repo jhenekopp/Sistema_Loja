@@ -1,0 +1,16 @@
+<app-campo-wrapper [label]="label" [forId]="id" [classesCss]="classesCss" [control]="control">
+    <ng-container *ngIf="formControlName; else templateDriven">
+        <p-calendar [showIcon]="showIcon" [formControlName]="formControlName" [dateFormat]="formatoData" 
+                    [dataType]="dataType" [showTime]="exibirHorario" [disabled]="disabled" [readonlyInput]="readonlyInput"
+                    [hideOnDateTimeSelect]="true" [showSeconds]="true" [showButtonBar]="exibirBarraBotao"
+                    [hourFormat]="formatoHora" [locale]="configLocale" [ngClass]="classeDefault"  [inputStyle]="inputStyle"
+                    (onBlur)="registerOnTouched({})"></p-calendar>
+    </ng-container>
+    <ng-template #templateDriven>
+        <p-calendar [showIcon]="showIcon" [formControlName]="formControlName" [dateFormat]="formatoData"
+                    [dataType]="dataType" [showTime]="exibirHorario" [disabled]="disabled" [readonlyInput]="readonlyInput"
+                    [hideOnDateTimeSelect]="true" [showSeconds]="true" [showButtonBar]="exibirBarraBotao"
+                    [(ngModel)]="valorDoCampo" [hourFormat]="formatoHora" [locale]="configLocale"
+                    (onBlur)="registerOnTouched({})" [ngClass]="classeDefault" [inputStyle]="inputStyle"></p-calendar>
+    </ng-template>
+</app-campo-wrapper>

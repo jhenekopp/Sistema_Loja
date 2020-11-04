@@ -1,0 +1,6 @@
+<div class="px-0 px-md-2 ui-g-12" [ngClass]="classesCss">
+	<label class="d-inline-block text-uppercase font-weight-bold mb-0" [attr.for]="forId">{{label}}</label>
+	<ng-content></ng-content>
+
+	<app-mensagem-erro [control]="control" [labelCampo]="obterLabelDeErro()"></app-mensagem-erro>
+</div> 

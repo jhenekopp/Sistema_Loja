@@ -1,35 +1,30 @@
-import { TestBed } from '@angular/core/testing';
+/* tslint:disable:no-unused-variable */
+
+import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { AppTopBarComponent } from './app.topbar.component';
+import { AppFooterComponent } from './app.footer.component';
+import { AppMenuComponent } from './app.menu.component';
+import { MenuService } from './app.menu.service';
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [ RouterTestingModule ],
+      declarations: [ AppComponent,
+        AppTopBarComponent,
+        AppMenuComponent,
+        AppFooterComponent
       ],
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
+        providers: [MenuService]
+    });
+    TestBed.compileComponents();
   });
 
-  it('should create the app', () => {
+  it('should create the app', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+    const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'my-app'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('my-app');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('my-app app is running!');
-  });
+  }));
 });

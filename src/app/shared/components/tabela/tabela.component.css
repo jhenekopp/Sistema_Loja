@@ -1,0 +1,8 @@
+.p-datatable {
+    margin-top: 1em;
+    border: solid 1px #ccc;
+}
+
+.p-datatable > .p-datatable-header {
+    background: #F1F8FA;
+}

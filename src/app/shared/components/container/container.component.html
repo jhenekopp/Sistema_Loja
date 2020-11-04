@@ -1,0 +1,23 @@
+<div class="p-grid">
+    <div class="p-col-12 ">
+        <!-- <div class="p-col-12 p-0"> -->
+            <!-- <div class="card"> -->
+                <div class="ui-card-header card " *ngIf="!semCabecalho">
+                    <div class="title-header mb-2">
+                        <h1 style="text-transform: uppercase; margin: 0;" class="text-uppercase m-0">{{ titulo }}</h1>
+                        <ng-container *ngIf="voltar">
+                            <button pButton class="btn-voltar" label="voltar" icon="pi pi-arrow-left"
+                                (click)="voltarPagina()"></button>
+                        </ng-container>
+                    </div>
+                    <ng-content select="[card-header]"></ng-content>
+
+                    <ng-content select="[menu]"></ng-content>
+                    <ng-container class="ui-card-body m-0 p-0">
+                        <ng-content></ng-content>
+                    </ng-container>
+                </div>
+            <!-- </div> -->
+        <!-- </div> -->
+    </div>
+</div>

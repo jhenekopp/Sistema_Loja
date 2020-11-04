@@ -1,0 +1,12 @@
+.p-calendar {
+    width: 100%;
+}
+
+.p-button-label {
+    display: flex;
+}
+
+.p-calendar > .p-datepicker {
+    max-width: 100%;
+    min-width: 50% !important;
+}

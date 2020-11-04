@@ -1,0 +1,46 @@
+<div class="p-grid">
+    <div class="p-col-12">
+        <div class="card">
+            <p-table #tabela [value]="value" selectionMode="single" [responsive]="true"
+                [globalFilterFields]="filtroGlobal" [paginator]="true" [rows]="5">
+                <ng-template pTemplate="caption">
+                    <div class="d-flex">
+                        <div class="ui-g-12 titulo-tabela">
+                            <span>{{ titulo }}</span>
+                        </div>
+                        <div class="ui-g-9 pesquisa-global">
+                            <span class="p-input-icon-left d-flex">
+                                <i style="align-items: center;" class="pi pi-search d-flex"></i>
+                                <input pInputText type="text"
+                                    (input)="tabela.filterGlobal($event.target.value, 'contains')"
+                                    placeholder="Pesquisa global" />
+                            </span>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="header" let-columns="colunas">
+                    <tr>
+                        <th *ngFor="let coluna of colunas" [pSortableColumn]="coluna.field">
+                            {{ coluna.header }}
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-columns="colunas">
+                    <tr [pSelectableRow]="rowData">
+                        <td *ngFor="let coluna of colunas" (click)="navegaOuEmit(rowData)">
+                            {{ coluna.type ? coluna.type.transform(resolveField.resolveFieldData(rowData, coluna.field)) 
+                  : resolveField.resolveFieldData(rowData, coluna.field) }}
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="emptymessage">
+                    <tr>
+                        <td [attr.colspan]="colunas?.length">
+                            <span id="msg-empty">OOPS! Nenhum registro encontrado.</span>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="topbar">
+    <a href="#" id="menu-button" (click)="app.onMenuButtonClick($event)" style="margin-left: 0; margin-right: 10px;">
+        <i class="fa fa-bars"></i>
+    </a>
+
+    <a routerLink="/" class="topbar-logo">
+        <img [attr.src]="app.layout === 'default' ? 'assets/layout/images/logo-izzy-makers-black.png' : 'assets/layout/images/logo-izzy-makers-black.png'" style="border: 0 none">
+    </a>
+
+    <a href="#" id="user-display" (click)="app.onTopbarMenuButtonClick($event)">
+        <span class="username">Jefferson</span>
+        <img src="assets/layout/images/avatarJeff.png" style="border: 0px;">
+    </a>
+</div>
