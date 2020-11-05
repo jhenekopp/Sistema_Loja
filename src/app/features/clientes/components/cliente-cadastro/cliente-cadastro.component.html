@@ -1,0 +1,14 @@
+<div class="btn-flex-end">
+    <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
+    <span class="d-flex pl-1 pr-1" 
+          style="align-items: center;">Pessoa Física / Jurídica</span>
+</div>
+
+<p-fieldset [legend]="checked ? 'Dados Pessoais' : 'Dados Empresarial'">
+    Content
+</p-fieldset>
+<div class="pt-1">
+    <p-fieldset [legend]="checked ? 'Dados Residencial' : 'Dados Comercial'">
+        Content
+    </p-fieldset>
+</div>

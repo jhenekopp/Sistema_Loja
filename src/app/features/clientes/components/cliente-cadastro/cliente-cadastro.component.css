@@ -1,0 +1,7 @@
+.ui-fieldset .ui-fieldset-legend {
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 0 !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}

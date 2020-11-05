@@ -59,6 +59,9 @@ export class AppMenuComponent implements OnInit, OnDestroy, AfterViewInit {
                     { label: 'Estoque', icon: 'fas fa-edit', routerLink: ['#'] }
                 ]
             },
+            {
+                label: 'Clientes', icon: 'fas fa-users', routerLink: ['clientes']
+            }
         ];
     }
 }

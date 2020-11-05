@@ -10,6 +10,10 @@ export const routes: Routes = [
     {
         path: 'home',
         loadChildren: () => import('./features/tela-principal/tela-principal.module').then(module => module.TelaPrincipalModule)
+    },
+    {
+        path: 'clientes',
+        loadChildren: () => import('./features/clientes/clientes.module').then(module => module.ClientesModule)
     }
 ];
 
