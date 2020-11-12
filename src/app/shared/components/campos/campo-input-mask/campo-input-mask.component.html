@@ -3,16 +3,11 @@
          <p-inputMask [mask]="mascara" [placeholder]="placeholder" size="tamanho" [formControlName]="formControlName"
                       [style]="{'width':'100%'}" unmask="unmask" [ngClass]="classeDefault" on-focusout="registerOnTouched({})"
                       [id]="id" [name]="name"></p-inputMask>
-
-		<!-- <input pInputText [id]="id" [formControlName]="formControlName" on-focusout="registerOnTouched({})"
-			   autocomplete="nope" [placeholder]="placeholder" [type]="type" [ngClass]="classeDefault"
-			   [name]="name"> -->
+		<span *ngIf="obrigatorio" class="ui-g-12" style="color: rgba(0, 0, 0, 0.2);">campo obrigatorio**</span>
 	</ng-container>
 	<ng-template #templateDriven>
         <p-inputMask [mask]="mascara" [placeholder]="placeholder" size="tamanho" [formControlName]="formControlName"
                       [style]="{'width':'100%'}" unmask="unmask" [ngClass]="classeDefault" on-focusout="registerOnTouched({})"></p-inputMask>
-
-		<!-- <input pInputText [id]="id" [name]="name" [(ngModel)]="valorDoCampo" on-focusout="registerOnTouched({})"
-			autocomplete="nope" [placeholder]="placeholder" [ngClass]="classeDefault"> -->
+		<span *ngIf="obrigatorio" class="ui-g-12" style="color: rgba(0, 0, 0, 0.2);">campo obrigatorio**</span>
 	</ng-template>
 </app-campo-wrapper>

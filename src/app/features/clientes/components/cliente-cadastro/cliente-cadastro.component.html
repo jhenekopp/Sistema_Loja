@@ -28,9 +28,9 @@
             <p-fieldset [legend]="checked ? 'Dados Residencial' : 'Dados Comercial'">
 
                 <div class="ui-g-12">
-                    <app-campo-input-mask label="CEP" formControlName="cep" class="ui-g-3 ui-md-3 ui-sm-12"
-                        [control]="obterControleDoCampo('cep')" (change)="buscaEnderecoPeloCep()"
-                        mascara="99999-999" placeholder="99999-999" tamanho="9" id="cep" name="cep"></app-campo-input-mask>
+                    <app-campo-input-mask label="CEP" formControlName="cep" class="ui-g-3 ui-md-3 ui-sm-12 pb-0"
+                        [control]="obterControleDoCampo('cep')" (change)="buscaEnderecoPeloCep()" mascara="99999-999"
+                        placeholder="87000-000" tamanho="9" id="cep" name="cep"></app-campo-input-mask>
                 </div>
 
                 <div class="ui-g-12">

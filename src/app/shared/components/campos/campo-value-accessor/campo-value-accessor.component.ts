@@ -23,7 +23,8 @@ export class CampoValueAccessor implements ControlValueAccessor {
   @Input() placeholder: string = '';
   @Input() type: string = 'text';
   @Input() labelCampoErro: string;
-
+  @Input() obrigatorio: boolean = true;
+  
   @Output() aoMudar = new EventEmitter(false);
 
   _valorDoCampo: any;
