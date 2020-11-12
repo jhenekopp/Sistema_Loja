@@ -39,4 +39,8 @@ export class TabelaComponent {
 		}
 		return [this.prefixoDetalhe, objeto.id];
 	}
+
+	verificaSeTabelaTemRegistros(): boolean {
+		return this.value?.length == 0
+	}
 }

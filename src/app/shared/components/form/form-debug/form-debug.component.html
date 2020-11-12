@@ -1,7 +1,9 @@
-<div style="margin-top: 20px; border-top: 1px solid #d3d3d3" *ngIf="form && exibirDebug">
-<div class="d-flex" style="font-size: 35px; justify-content: center;">Debug do formulário </div>
-    <div style="font-weight: bold;">Detalhes do form:</div>
+<div class="ui-g-12">
+    <div style="margin-top: 20px; border-top: 1px solid #d3d3d3" *ngIf="form && exibirDebug">
+        <div class="d-flex" style="font-size: 35px; justify-content: center;">Debug do formulário </div>
+        <div style="font-weight: bold;">Detalhes do form:</div>
 
-    <pre>Form válido: {{ form.valid }}</pre>
-    <pre>Valores: <br>{{ form.value | json }}</pre>
+        <pre>Form válido: {{ form.valid }}</pre>
+        <pre>Valores: <br>{{ form.value | json }}</pre>
+    </div>
 </div>

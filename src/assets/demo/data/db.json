@@ -1,0 +1,44 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Fulano de Tal",
+      "dataNascimento": "20/02/1985",
+      "cpfCnpj": "123.456.654-85",
+      "rgInscricaoEstadual": "123456-9",
+      "telefonePrincipal": "(44) 9 8745-8228",
+      "telefoneResidencial": null,
+      "telefoneComercial": null,
+      "sexo": "MASCULINO",
+      "email": "fulano@gmail.com",
+      "cep": "87023-500",
+      "endereco": "Av Brasil",
+      "numero": "1500",
+      "bairro": "Centro",
+      "complemento": null,
+      "estado": "PR",
+      "cidade": "Maringá",
+      "observacoesGerais": null,
+      "tipoPessoa": "FISICA"
+    },
+    {
+      "id": 2,
+      "nome": "Lojao Opa Opa ltda",
+      "nomeFantasia": "Lojão opa opa",
+      "cpfCnpj": "12.123.123/0001-80",
+      "rgInscricaoEstadual": "12.123.122.123",
+      "telefonePrincipal": "(44) 3263-3223",
+      "telefoneFax": null,
+      "email": "lojao-opa@gmail.com",
+      "cep": "87023-240",
+      "endereco": "Rua Pioneiro affonso rosa lobato",
+      "numero": "206",
+      "bairro": "Residencial Copacabana",
+      "complemento": null,
+      "estado": "PR",
+      "cidade": "Maringá",
+      "observacoesGerais": null,
+      "tipoPessoa": "JURIDICA"
+    }
+  ]
+}

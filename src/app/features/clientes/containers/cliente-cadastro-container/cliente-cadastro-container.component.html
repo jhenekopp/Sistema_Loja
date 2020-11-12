@@ -1,4 +1,6 @@
-<app-container titulo="Cadastro de Cliente" voltar="true">
+<app-container [titulo]="editando ? 'Editar Cadastro de Cliente': 'Cadastro de Cliente'" voltar="true">
 
-    <app-cliente-cadastro></app-cliente-cadastro>
+    <app-cliente-cadastro [cliente]="cliente"
+                          (deletar)="deletarCliente($event)"
+                          (salvar)="aoSalvar($event)"></app-cliente-cadastro>
 </app-container>

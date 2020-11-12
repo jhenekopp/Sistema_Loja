@@ -5,3 +5,7 @@
     padding-left: 5px !important;
     padding-right: 5px !important;
 }
+
+.ui-g-12 {
+    padding: 0;
+}

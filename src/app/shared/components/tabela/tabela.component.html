@@ -34,11 +34,13 @@
                     </tr>
                 </ng-template>
                 <ng-template pTemplate="emptymessage">
-                    <tr>
-                        <td [attr.colspan]="colunas?.length">
-                            <span id="msg-empty">OOPS! Nenhum registro encontrado.</span>
-                        </td>
-                    </tr>
+                    <ng-container *ngIf="verificaSeTabelaTemRegistros()">
+                        <tr>
+                            <td [attr.colspan]="colunas?.length">
+                                <span>OOPS! Nenhum registro encontrado.</span>
+                            </td>
+                        </tr>
+                    </ng-container>
                 </ng-template>
             </p-table>
         </div>

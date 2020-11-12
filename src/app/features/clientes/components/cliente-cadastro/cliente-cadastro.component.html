@@ -1,14 +1,82 @@
-<div class="btn-flex-end">
-    <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
-    <span class="d-flex pl-1 pr-1" 
-          style="align-items: center;">Pessoa Física / Jurídica</span>
-</div>
+<app-container>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
 
-<p-fieldset [legend]="checked ? 'Dados Pessoais' : 'Dados Empresarial'">
-    Content
-</p-fieldset>
-<div class="pt-1">
-    <p-fieldset [legend]="checked ? 'Dados Residencial' : 'Dados Comercial'">
-        Content
-    </p-fieldset>
-</div>
+        <div class="btn-flex-end" >
+            <div class="p-field-radiobutton m-0">
+                <p-radioButton  [disabled]="editando" type="radio" label="Pessoa Física" [(ngModel)]="checked" [value]="true" 
+                                [ngModelOptions]="{standalone: true}" (click)=alteraTipoDePessoa(true)></p-radioButton>
+            </div>
+            <div class="p-field-radiobutton pl-1 m-0" style="padding-right: 5px;">
+                <p-radioButton [disabled]="editando" label="Pessoa Juridica"  [value]="false" 
+                               [(ngModel)]="checked" [ngModelOptions]="{standalone: true}" (click)=alteraTipoDePessoa(false)></p-radioButton>
+            </div>
+        </div>
+
+        <p-fieldset [legend]="checked ? 'Dados Pessoais' : 'Dados Empresarial'">
+
+            <ng-template [ngIf]="checked" [ngIfElse]="juridica">
+                <app-pessoa-fisica [formulario]="formulario"></app-pessoa-fisica>
+            </ng-template>
+            <ng-template #juridica>
+                <app-pessoa-juridica [formulario]="formulario"></app-pessoa-juridica>
+            </ng-template>
+
+        </p-fieldset>
+
+        <div class="pt-2">
+            <p-fieldset [legend]="checked ? 'Dados Residencial' : 'Dados Comercial'">
+
+                <div class="ui-g-12">
+                    <app-campo-input label="CEP" id="cep" formControlName="cep" class="ui-g-3 ui-md-3 ui-sm-12"
+                        [control]="obterControleDoCampo('cep')" (change)="buscaEnderecoPeloCep()"></app-campo-input>
+                </div>
+
+                <div class="ui-g-12">
+                    <app-campo-input label="endereço" id="endereco" formControlName="endereco"
+                        class="ui-g-9 ui-md-9 ui-sm-12" [control]="obterControleDoCampo('endereco')">
+                    </app-campo-input>
+
+                    <app-campo-input label="número" id="numero" formControlName="numero" class="ui-g-3 ui-md-3 ui-sm-12"
+                        [control]="obterControleDoCampo('numero')">
+                    </app-campo-input>
+                </div>
+
+                <div class="ui-g-12">
+                    <app-campo-input label="bairro" id="bairro" formControlName="bairro" class="ui-g-9 ui-md-9 ui-sm-12"
+                        [control]="obterControleDoCampo('bairro')">
+                    </app-campo-input>
+
+                    <app-campo-input label="complemento" id="complemento" formControlName="complemento"
+                        class="ui-g-3 ui-md-3 ui-sm-12" [control]="obterControleDoCampo('complemento')">
+                    </app-campo-input>
+                </div>
+
+                <div class="ui-g-12">
+                    <app-campo-input label="estado" id="estado" formControlName="estado" class="ui-g-6 ui-md-6 ui-sm-12"
+                        [control]="obterControleDoCampo('estado')">
+                    </app-campo-input>
+
+                    <app-campo-input label="cidade" id="cidade" formControlName="cidade" class="ui-g-6 ui-md-6 ui-sm-12"
+                        [control]="obterControleDoCampo('cidade')">
+                    </app-campo-input>
+                </div>
+
+            </p-fieldset>
+        </div>
+
+        <div class="pt-2">
+            <app-campo-text-area label="observações gerais" formControlName="observacoesGerais" id="observacoesGerais"
+                                 [control]="obterControleDoCampo('observacoesGerais')"></app-campo-text-area>
+        </div>
+
+        <div class="ui-g-12 d-flex w-auto">
+            <button pButton label="Salvar" type="submit" icon="pi pi-check" iconPos="right" class="ui-button-success"
+                    [disabled]="!formulario.valid"></button>
+            <div class="pl-2" *ngIf="cliente">
+                <button pButton label="Deletar" type="button" icon="pi pi-trash" iconPos="right"
+                        class="ui-button-danger" (click)="aoDeletar()" ></button>
+            </div>
+        </div>
+    </form>
+
+</app-container>

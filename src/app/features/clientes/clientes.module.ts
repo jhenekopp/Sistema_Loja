@@ -6,6 +6,8 @@ import { ClienteListaContainerComponent } from './containers/cliente-lista-conta
 import { ClienteCadastroContainerComponent } from './containers/cliente-cadastro-container/cliente-cadastro-container.component';
 import { ClienteCadastroComponent } from './components/cliente-cadastro/cliente-cadastro.component';
 import { ClienteListaComponent } from './components/cliente-lista/cliente-lista.component';
+import { PessoaFisicaComponent } from './components/pessoa-fisica/pessoa-fisica.component';
+import { PessoaJuridicaComponent } from './components/pessoa-juridica/pessoa-juridica.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { ClienteListaComponent } from './components/cliente-lista/cliente-lista.
     ClienteListaContainerComponent,
     ClienteCadastroContainerComponent,
     ClienteCadastroComponent,
-    ClienteListaComponent
+    ClienteListaComponent,
+    PessoaFisicaComponent,
+    PessoaJuridicaComponent
   ],
   imports: [
     SharedModule,

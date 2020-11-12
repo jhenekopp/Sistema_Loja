@@ -2,6 +2,7 @@ import { ClienteCadastroContainerComponent } from './containers/cliente-cadastro
 import { ClienteListaContainerComponent } from './containers/cliente-lista-container/cliente-lista-container.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ClienteResolver } from './resolvers/cliente.resolver';
 
 const routes: Routes = [
   {
@@ -11,6 +12,13 @@ const routes: Routes = [
   {
     path: 'novo',
     component: ClienteCadastroContainerComponent
+  },
+  {
+    path: ':idCliente',
+    component: ClienteCadastroContainerComponent,
+    resolve: {
+      cliente: ClienteResolver
+    }
   }
 ];
 

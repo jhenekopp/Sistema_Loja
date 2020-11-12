@@ -13,6 +13,7 @@ import {AppFooterComponent} from './app.footer.component';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 
 import { HttpClientModule } from '@angular/common/http';
+import { NgxViacepModule } from '@brunoc/ngx-viacep';
 
 @NgModule({
     imports: [
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
         BrowserAnimationsModule,
         HttpClientModule,
         ScrollPanelModule,
+        NgxViacepModule
     ],
     declarations: [
         AppComponent,

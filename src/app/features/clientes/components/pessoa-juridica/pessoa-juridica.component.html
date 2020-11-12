@@ -1,0 +1,32 @@
+<div [formGroup]="formulario" class="ui-g-12">
+
+    <div class="p-col-12">
+        <app-campo-input label="razão social" id="nome" formControlName="nome" [control]="obterControleDoCampo('nome')">
+        </app-campo-input>
+    </div>
+
+    <div class="p-col-12" style="padding-top: 3em;">
+        <app-campo-input label="nome fantasia" id="nomeFantasia" formControlName="nomeFantasia"
+            [control]="obterControleDoCampo('nomeFantasia')"></app-campo-input>
+    </div>
+
+    <div class="ui-g-12">
+        <app-campo-input label="CNPJ" id="cnpj" formControlName="cpfCnpj" class="ui-g-6 ui-md-6 ui-sm-12"
+            [control]="obterControleDoCampo('cpfCnpj')"></app-campo-input>
+
+        <app-campo-input label="inscrição estadual" id="inscricaoEstadual" formControlName="rgInscricaoEstadual"
+            class="ui-g-6 ui-md-6 ui-sm-12" [control]="obterControleDoCampo('rgInscricaoEstadual')"></app-campo-input>
+    </div>
+
+    <div class="ui-g-12">
+        <app-campo-input label="telefone comercial" id="telefoneComercial" formControlName="telefonePrincipal"
+            class="ui-g-3 ui-md-3 ui-sm-12" [control]="obterControleDoCampo('telefonePrincipal')"></app-campo-input>
+
+        <app-campo-input label="telefone fax" id="telefoneFax" formControlName="telefoneFax"
+            class="ui-g-3 ui-md-3 ui-sm-12" [control]="obterControleDoCampo('telefoneFax')"></app-campo-input>
+
+        <app-campo-input label="e-mail" id="eMail" formControlName="email" class="ui-g-6 ui-md-6 ui-sm-12"
+            [control]="obterControleDoCampo('email')"></app-campo-input>
+    </div>
+
+</div>

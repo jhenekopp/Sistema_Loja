@@ -12,7 +12,7 @@ export const CUSTOM_CONTROL_CONTAINER: any = {
 };
 
 export class CampoValueAccessor implements ControlValueAccessor {
-  classeDefault = 'ui-g-12 d-flex mb-2 w-100';
+  classeDefault = 'ui-g-12 d-flex w-100';
 
   @Input() label: string;
   @Input() id: string;
