@@ -1,3 +1,4 @@
+import { CampoInputMaskComponent } from './components/campos/campo-input-mask/campo-input-mask.component';
 import { SimOuNaoPipe } from './pipes/sim-ou-nao';
 import { DateFormatDiaMesAno } from './pipes/dia-mes-ano';
 import { FormDebugComponent } from './components/form/form-debug/form-debug.component';
@@ -26,6 +27,7 @@ import { MensagemErroComponent } from './components/form/mensagem-erro/mensagem-
     MensagemErroComponent,
     DateFormatDiaMesAno,
     SimOuNaoPipe,
+    CampoInputMaskComponent,
   ],
   imports: [
     SharedLibsModule,
@@ -45,6 +47,7 @@ import { MensagemErroComponent } from './components/form/mensagem-erro/mensagem-
     MensagemErroComponent,
     DateFormatDiaMesAno,
     SimOuNaoPipe,
+    CampoInputMaskComponent,
   ]
 })
 export class SharedCommonModule { }

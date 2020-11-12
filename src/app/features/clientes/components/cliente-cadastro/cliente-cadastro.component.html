@@ -1,14 +1,15 @@
 <app-container>
     <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
 
-        <div class="btn-flex-end" >
+        <div class="btn-flex-end">
             <div class="p-field-radiobutton m-0">
-                <p-radioButton  [disabled]="editando" type="radio" label="Pessoa Física" [(ngModel)]="checked" [value]="true" 
-                                [ngModelOptions]="{standalone: true}" (click)=alteraTipoDePessoa(true)></p-radioButton>
+                <p-radioButton [disabled]="editando" type="radio" label="Pessoa Física" [(ngModel)]="checked"
+                    [value]="true" [ngModelOptions]="{standalone: true}" (click)=alteraTipoDePessoa(true)>
+                </p-radioButton>
             </div>
             <div class="p-field-radiobutton pl-1 m-0" style="padding-right: 5px;">
-                <p-radioButton [disabled]="editando" label="Pessoa Juridica"  [value]="false" 
-                               [(ngModel)]="checked" [ngModelOptions]="{standalone: true}" (click)=alteraTipoDePessoa(false)></p-radioButton>
+                <p-radioButton [disabled]="editando" label="Pessoa Juridica" [value]="false" [(ngModel)]="checked"
+                    [ngModelOptions]="{standalone: true}" (click)=alteraTipoDePessoa(false)></p-radioButton>
             </div>
         </div>
 
@@ -27,8 +28,9 @@
             <p-fieldset [legend]="checked ? 'Dados Residencial' : 'Dados Comercial'">
 
                 <div class="ui-g-12">
-                    <app-campo-input label="CEP" id="cep" formControlName="cep" class="ui-g-3 ui-md-3 ui-sm-12"
-                        [control]="obterControleDoCampo('cep')" (change)="buscaEnderecoPeloCep()"></app-campo-input>
+                    <app-campo-input-mask label="CEP" formControlName="cep" class="ui-g-3 ui-md-3 ui-sm-12"
+                        [control]="obterControleDoCampo('cep')" (change)="buscaEnderecoPeloCep()"
+                        mascara="99999-999" placeholder="99999-999" tamanho="9" id="cep" name="cep"></app-campo-input-mask>
                 </div>
 
                 <div class="ui-g-12">
@@ -66,15 +68,15 @@
 
         <div class="pt-2">
             <app-campo-text-area label="observações gerais" formControlName="observacoesGerais" id="observacoesGerais"
-                                 [control]="obterControleDoCampo('observacoesGerais')"></app-campo-text-area>
+                [control]="obterControleDoCampo('observacoesGerais')"></app-campo-text-area>
         </div>
 
         <div class="ui-g-12 d-flex w-auto">
             <button pButton label="Salvar" type="submit" icon="pi pi-check" iconPos="right" class="ui-button-success"
-                    [disabled]="!formulario.valid"></button>
+                [disabled]="!formulario.valid"></button>
             <div class="pl-2" *ngIf="cliente">
                 <button pButton label="Deletar" type="button" icon="pi pi-trash" iconPos="right"
-                        class="ui-button-danger" (click)="aoDeletar()" ></button>
+                    class="ui-button-danger" (click)="aoDeletar()"></button>
             </div>
         </div>
     </form>
