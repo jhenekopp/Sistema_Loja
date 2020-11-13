@@ -3,14 +3,16 @@
     <div class="ui-g-12">
         <app-campo-input label="nome completo" id="nome" formControlName="nome"
             class="ui-g-8 ui-md-8 ui-sm-12" [control]="obterControleDoCampo('nome')"></app-campo-input>
-                
-        <app-campo-input label="data nascimento" id="dataNascimento" formControlName="dataNascimento"
-            class="ui-g-4 ui-md-4 ui-sm-12" [control]="obterControleDoCampo('dataNascimento')"></app-campo-input>
+        
+        <app-campo-calendario label="data nascimento" id="dataNascimento" formControlName="dataNascimento" 
+                              class="ui-g-4 ui-md-4 ui-sm-12" [control]="obterControleDoCampo('dataNascimento')"
+                              [exibirHorario]="false"></app-campo-calendario>
     </div>
 
     <div class="ui-g-12">
-        <app-campo-input label="CPF" id="cpf" formControlName="cpfCnpj" class="ui-g-6 ui-md-6 ui-sm-12"
-            [control]="obterControleDoCampo('cpfCnpj')"></app-campo-input>
+        <app-campo-input-mask label="CPF" formControlName="cpfCnpj" class="ui-g-6 ui-md-6 ui-sm-12"
+                        [control]="obterControleDoCampo('cpfCnpj')" mascara="999.999.999-99"
+                         tamanho="11" id="cpf"></app-campo-input-mask>
 
         <app-campo-input label="RG" id="rg" formControlName="rgInscricaoEstadual" class="ui-g-6 ui-md-6 ui-sm-12"
             [control]="obterControleDoCampo('rgInscricaoEstadual')"></app-campo-input>

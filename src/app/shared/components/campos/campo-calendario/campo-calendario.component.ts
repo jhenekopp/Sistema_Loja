@@ -25,7 +25,7 @@ export class CampoCalendarioComponent extends CampoValueAccessor {
     @Input() formatoHora = '24';
     @Input() exibirBarraBotao = true;
     @Input() showIcon = true;
-    @Input() exibirHorario = true;
+    @Input() exibirHorario: boolean = true;
     @Input() readonlyInput = false;
     @Input() disabled = false;
     @Input() inputStyle: {};

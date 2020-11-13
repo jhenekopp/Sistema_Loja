@@ -11,7 +11,7 @@ export const camposPessoaFisica = formBuilder => {
         telefoneResidencial: [null],
         telefoneComercial: [null],
         sexo: [null, Validators.required],
-        email: [null, [Validators.required, Validators.email]],
+        email: [null, [Validators.email]],
         cep: [null, Validators.required],
         endereco: [null, Validators.required],
         numero: [null, Validators.required],
