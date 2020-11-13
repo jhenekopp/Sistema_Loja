@@ -15,6 +15,15 @@ export const routes: Routes = [
         path: 'clientes',
         loadChildren: () => import('./features/clientes/clientes.module').then(module => module.ClientesModule)
     }
+
+    /**
+     * Nosso site |
+     * www.izzymakers.com.br/home
+     * www.izzymakers.com.br/clientes
+     * 
+     * 
+     * 
+    */
 ];
 
 export const AppRoutes: ModuleWithProviders<RouterModule> = RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' });

@@ -20,6 +20,12 @@ const routes: Routes = [
       cliente: ClienteResolver
     }
   }
+
+  /**
+   * www.izzymakers.com.br/clientes
+   * www.izzymakers.com.br/clientes/novo
+   * www.izzymakers.com.br/clientes/1 [..2, ...3, zas]
+  */
 ];
 
 @NgModule({
