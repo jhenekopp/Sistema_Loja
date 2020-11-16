@@ -30,36 +30,37 @@
                 <div class="ui-g-12">
                     <app-campo-input-mask label="CEP" formControlName="cep" class="ui-g-3 ui-md-3 ui-sm-12 pb-0"
                         [control]="obterControleDoCampo('cep')" (change)="buscaEnderecoPeloCep()" mascara="99999-999"
-                        placeholder="87000-000" tamanho="9" id="cep" name="cep"></app-campo-input-mask>
+                        tamanho="9" id="cep" name="cep"></app-campo-input-mask>
                 </div>
 
                 <div class="ui-g-12">
-                    <app-campo-input label="endereço" id="endereco" formControlName="endereco" 
-                        class="ui-g-9 ui-md-9 ui-sm-12" [control]="obterControleDoCampo('endereco')">
+                    <app-campo-input label="endereço" formControlName="endereço" class="ui-g-9 ui-md-9 ui-sm-12"
+                        [control]="obterControleDoCampo('endereço')" id="endereco" name="endereço">
+                    </app-campo-input>
+    
+                    <app-campo-input-mask label="número" formControlName="numero" class="ui-g-3 ui-md-3 ui-sm-12"
+                    [control]="obterControleDoCampo('numero')" mascara="99999"
+                    tamanho="5" id="numero" name="numero">
+                    </app-campo-input-mask>
+                </div>
+
+                <div class="ui-g-12">
+                    <app-campo-input label="bairro" formControlName="bairro" class="ui-g-9 ui-md-9 ui-sm-12"
+                        [control]="obterControleDoCampo('bairro')" id="bairro">
                     </app-campo-input>
 
-                    <app-campo-input label="número" id="numero" formControlName="numero" class="ui-g-3 ui-md-3 ui-sm-12"
-                        [control]="obterControleDoCampo('numero')">
+                    <app-campo-input label="complemento" formControlName="complemento" class="ui-g-3 ui-md-3 ui-sm-12"
+                        [control]="obterControleDoCampo('complemento')" id="complemento" [obrigatorio]="false">
                     </app-campo-input>
                 </div>
 
                 <div class="ui-g-12">
-                    <app-campo-input label="bairro" id="bairro" formControlName="bairro" class="ui-g-9 ui-md-9 ui-sm-12"
-                        [control]="obterControleDoCampo('bairro')">
+                    <app-campo-input label="estado" formControlName="estado"  class="ui-g-6 ui-md-6 ui-sm-12"   
+                        [control]="obterControleDoCampo('estado')" id="estado">
                     </app-campo-input>
 
-                    <app-campo-input label="complemento" id="complemento" formControlName="complemento"
-                        class="ui-g-3 ui-md-3 ui-sm-12" [control]="obterControleDoCampo('complemento')">
-                    </app-campo-input>
-                </div>
-
-                <div class="ui-g-12">
-                    <app-campo-input label="estado" id="estado" formControlName="estado" class="ui-g-6 ui-md-6 ui-sm-12"
-                        [control]="obterControleDoCampo('estado')">
-                    </app-campo-input>
-
-                    <app-campo-input label="cidade" id="cidade" formControlName="cidade" class="ui-g-6 ui-md-6 ui-sm-12"
-                        [control]="obterControleDoCampo('cidade')">
+                    <app-campo-input label="cidade" formControlName="cidade" class="ui-g-6 ui-md-6 ui-sm-12"
+                        [control]="obterControleDoCampo('cidade')" id="cidade">
                     </app-campo-input>
                 </div>
 
