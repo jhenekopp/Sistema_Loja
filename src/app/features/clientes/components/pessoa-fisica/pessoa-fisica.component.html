@@ -1,18 +1,18 @@
 <div [formGroup]="formulario" class="ui-g-12">
 
     <div class="ui-g-12">
-        <app-campo-input label="nome completo" id="nome" formControlName="nome"
-            class="ui-g-8 ui-md-8 ui-sm-12" [control]="obterControleDoCampo('nome')"></app-campo-input>
-        
-        <app-campo-calendario label="data nascimento" id="dataNascimento" formControlName="dataNascimento" 
-                              class="ui-g-4 ui-md-4 ui-sm-12" [control]="obterControleDoCampo('dataNascimento')"
-                              [exibirHorario]="false"></app-campo-calendario>
+        <app-campo-input label="nome completo" id="nome" formControlName="nome" class="ui-g-8 ui-md-8 ui-sm-12"
+            [control]="obterControleDoCampo('nome')"></app-campo-input>
+
+        <app-campo-calendario label="data nascimento" id="dataNascimento" formControlName="dataNascimento"
+            class="ui-g-4 ui-md-4 ui-sm-12" [control]="obterControleDoCampo('dataNascimento')" [exibirHorario]="false">
+        </app-campo-calendario>
     </div>
 
     <div class="ui-g-12">
         <app-campo-input-mask label="CPF" formControlName="cpfCnpj" class="ui-g-6 ui-md-6 ui-sm-12"
-                        [control]="obterControleDoCampo('cpfCnpj')" mascara="999.999.999-99"
-                         tamanho="11" id="cpf"></app-campo-input-mask>
+            [control]="obterControleDoCampo('cpfCnpj')" mascara="999.999.999-99" tamanho="11" id="cpf">
+        </app-campo-input-mask>
 
         <app-campo-input label="RG" id="rg" formControlName="rgInscricaoEstadual" class="ui-g-6 ui-md-6 ui-sm-12"
             [control]="obterControleDoCampo('rgInscricaoEstadual')"></app-campo-input>
@@ -23,15 +23,18 @@
             class="ui-g-4 ui-md-4 ui-sm-12" [control]="obterControleDoCampo('telefonePrincipal')"></app-campo-input>
 
         <app-campo-input label="telefone residencial" id="telefoneResidencial" formControlName="telefoneResidencial"
-            class="ui-g-4 ui-md-4 ui-sm-12" [control]="obterControleDoCampo('telefoneResidencial')" [obrigatorio]="false"></app-campo-input>
+            class="ui-g-4 ui-md-4 ui-sm-12" [control]="obterControleDoCampo('telefoneResidencial')"
+            [obrigatorio]="false"></app-campo-input>
 
         <app-campo-input label="telefone comercial" id="telefoneComercial" formControlName="telefoneComercial"
-            class="ui-g-4 ui-md-4 ui-sm-12" [control]="obterControleDoCampo('telefoneComercial')"  [obrigatorio]="false"></app-campo-input>
+            class="ui-g-4 ui-md-4 ui-sm-12" [control]="obterControleDoCampo('telefoneComercial')" [obrigatorio]="false">
+        </app-campo-input>
     </div>
 
     <div class="ui-g-12">
-        <app-campo-input label="sexo" id="sexo" formControlName="sexo" class="ui-g-4 ui-md-4 ui-sm-12"
-            [control]="obterControleDoCampo('sexo')"></app-campo-input>
+        <app-campo-dropdown label="genero" id="sexo" formControlName="sexo" class="ui-g-4 ui-md-4 ui-sm-12"
+                            [opcoes]="genero" placeholder="Selecione um genero..." 
+                            [control]="obterControleDoCampo('sexo')"></app-campo-dropdown>
 
         <app-campo-input label="e-mail" id="email" formControlName="email" class="ui-g-8 ui-md-8 ui-sm-12"
             [control]="obterControleDoCampo('email')"></app-campo-input>

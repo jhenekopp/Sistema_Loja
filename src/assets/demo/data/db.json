@@ -39,6 +39,27 @@
       "cidade": "Maringá",
       "observacoesGerais": null,
       "tipoPessoa": "JURIDICA"
+    },
+    {
+      "id": 3,
+      "nome": "t",
+      "dataNascimento": "03/11/2020",
+      "cpfCnpj": "44444444444",
+      "rgInscricaoEstadual": "4444444444",
+      "telefonePrincipal": "4444444444444",
+      "telefoneResidencial": null,
+      "telefoneComercial": null,
+      "sexo": "FEMININO",
+      "email": "f@e",
+      "cep": "87023240",
+      "endereco": "Rua Pioneiro Affonso Rosa Lobato",
+      "numero": "222",
+      "bairro": "Copacabana Residencial",
+      "complemento": "",
+      "estado": "PR",
+      "cidade": "Maringá",
+      "observacoesGerais": null,
+      "tipoPessoa": "FISICA"
     }
   ]
 }

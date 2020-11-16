@@ -3,14 +3,18 @@
         <p-calendar [showIcon]="showIcon" [formControlName]="formControlName" [dateFormat]="formatoData" 
                     [dataType]="dataType" [showTime]="exibirHorario" [disabled]="disabled" [readonlyInput]="readonlyInput"
                     [hideOnDateTimeSelect]="true" [showSeconds]="true" [showButtonBar]="exibirBarraBotao"
-                    [hourFormat]="formatoHora" [locale]="configLocale" [ngClass]="classeDefault"  [inputStyle]="inputStyle"
+                    [hourFormat]="formatoHora" [locale]="configLocale" [ngClass]="classeDefault"  [inputStyle]="{'width':'85%'}"
                     (onBlur)="registerOnTouched({})"></p-calendar>
+		<span *ngIf="obrigatorio" class="ui-g-12" style="color: rgba(0, 0, 0, 0.2);">campo obrigatorio**</span>
+
     </ng-container>
     <ng-template #templateDriven>
         <p-calendar [showIcon]="showIcon" [formControlName]="formControlName" [dateFormat]="formatoData"
                     [dataType]="dataType" [showTime]="exibirHorario" [disabled]="disabled" [readonlyInput]="readonlyInput"
                     [hideOnDateTimeSelect]="true" [showSeconds]="true" [showButtonBar]="exibirBarraBotao"
                     [(ngModel)]="valorDoCampo" [hourFormat]="formatoHora" [locale]="configLocale"
-                    (onBlur)="registerOnTouched({})" [ngClass]="classeDefault" [inputStyle]="inputStyle"></p-calendar>
+                    (onBlur)="registerOnTouched({})" [ngClass]="classeDefault" [inputStyle]="{'width':'90%'}"></p-calendar>
+		<span *ngIf="obrigatorio" class="ui-g-12" style="color: rgba(0, 0, 0, 0.2);">campo obrigatorio**</span>
+
     </ng-template>
 </app-campo-wrapper>

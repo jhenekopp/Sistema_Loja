@@ -1,3 +1,5 @@
+import { Genero } from './../../models/genero';
+import { SelectItem } from 'primeng/api';
 import { camposPessoaJuridica } from './campos-pessoa-juridica';
 import { camposPessoaFisica } from './campos-pesso-fisica';
 import { PessoaFisica } from './../../models/pessoa-fisica.model';
@@ -5,6 +7,7 @@ import { PessoaJuridica } from './../../models/pessoa-juridica.model';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Component, OnInit, ViewEncapsulation,  Output, EventEmitter, Input, ChangeDetectionStrategy } from '@angular/core';
 import { NgxViacepService } from '@brunoc/ngx-viacep';
+import { converteEnumEmSelectItem } from 'src/app/shared/services/utils/converte-enum-em-selectitem';
 
 @Component({
 	selector: 'app-cliente-cadastro',
@@ -16,6 +19,8 @@ import { NgxViacepService } from '@brunoc/ngx-viacep';
 export class ClienteCadastroComponent implements OnInit {
 	formulario: FormGroup
 	checked: boolean = true;
+	genero: SelectItem[];
+
 
 	@Input() cliente: PessoaFisica | PessoaJuridica;
 
@@ -32,9 +37,14 @@ export class ClienteCadastroComponent implements OnInit {
 	
 	ngOnInit() {
 		this.configuraFormularioPessoaFisica();
+		this.carregarGeneros();
         if (this.cliente) {
 			this.verificaTipoDePessoaCadastrada(this.cliente.tipoPessoa);
 		} 
+	}
+
+	carregarGeneros() {
+		this.genero = converteEnumEmSelectItem(Genero);
 	}
 
 	alteraTipoDePessoa(valor: boolean) {

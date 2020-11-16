@@ -29,5 +29,5 @@ export class CampoCalendarioComponent extends CampoValueAccessor {
     @Input() readonlyInput = false;
     @Input() disabled = false;
     @Input() inputStyle: {};
-    @Input() dataType = "date";
+    @Input() dataType = "string";
 }

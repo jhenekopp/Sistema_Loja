@@ -16,7 +16,7 @@
         <p-fieldset [legend]="checked ? 'Dados Pessoais' : 'Dados Empresarial'">
 
             <ng-template [ngIf]="checked" [ngIfElse]="juridica">
-                <app-pessoa-fisica [formulario]="formulario"></app-pessoa-fisica>
+                <app-pessoa-fisica [formulario]="formulario" [genero]="genero"></app-pessoa-fisica>
             </ng-template>
             <ng-template #juridica>
                 <app-pessoa-juridica [formulario]="formulario"></app-pessoa-juridica>

@@ -6,6 +6,8 @@
                     [showClear]="true" emptyFilterMessage="Nenhum resultado encontrado!"
                     (onChange)="registerOnChange($event.value)" [ngClass]="classeDefault"
                     (onBlur)="registerOnTouched($event)"></p-dropdown>
+		<span *ngIf="obrigatorio" class="ui-g-12" style="color: rgba(0, 0, 0, 0.2);">campo obrigatorio**</span>
+
     </ng-container>
     <ng-template #templateDriven>
         <p-dropdown [id]="id" [options]="opcoes" [(ngModel)]="valorDoCampo"
@@ -15,5 +17,7 @@
                     [showClear]="true" emptyFilterMessage="Nenhum resultado encontrado!"
                     (onChange)="registerOnChange($event.value)" [ngClass]="classeDefault"
                     (onBlur)="registerOnTouched($event)"></p-dropdown>
+		<span *ngIf="obrigatorio" class="ui-g-12" style="color: rgba(0, 0, 0, 0.2);">campo obrigatorio**</span>
+
     </ng-template>
 </app-campo-wrapper>

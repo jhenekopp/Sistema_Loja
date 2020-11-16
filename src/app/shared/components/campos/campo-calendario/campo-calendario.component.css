@@ -1,4 +1,4 @@
-.p-calendar {
+.ui-calendar {
     width: 100%;
 }
 
@@ -6,7 +6,6 @@
     display: flex;
 }
 
-.p-calendar > .p-datepicker {
-    max-width: 100%;
-    min-width: 50% !important;
+.ui-calendar .ui-datepicker {
+    width: 100%;
 }
