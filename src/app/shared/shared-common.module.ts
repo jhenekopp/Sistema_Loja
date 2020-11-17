@@ -1,3 +1,5 @@
+import { TelefoneTransformPipe } from './pipes/telefone-transform';
+import { CpfCnpjTransformPipe } from './pipes/cpf-cnpj-transform';
 import { CampoInputMaskComponent } from './components/campos/campo-input-mask/campo-input-mask.component';
 import { SimOuNaoPipe } from './pipes/sim-ou-nao';
 import { DateFormatDiaMesAno } from './pipes/dia-mes-ano';
@@ -28,6 +30,8 @@ import { MensagemErroComponent } from './components/form/mensagem-erro/mensagem-
     DateFormatDiaMesAno,
     SimOuNaoPipe,
     CampoInputMaskComponent,
+    CpfCnpjTransformPipe,
+    TelefoneTransformPipe,
   ],
   imports: [
     SharedLibsModule,
@@ -48,6 +52,8 @@ import { MensagemErroComponent } from './components/form/mensagem-erro/mensagem-
     DateFormatDiaMesAno,
     SimOuNaoPipe,
     CampoInputMaskComponent,
+    CpfCnpjTransformPipe,
+    TelefoneTransformPipe,
   ]
 })
 export class SharedCommonModule { }

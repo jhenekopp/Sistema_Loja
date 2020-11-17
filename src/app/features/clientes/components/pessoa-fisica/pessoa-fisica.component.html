@@ -13,22 +13,22 @@
         <app-campo-input-mask label="CPF" formControlName="cpfCnpj" class="ui-g-6 ui-md-6 ui-sm-12"
         [control]="obterControleDoCampo('cpfCnpj')" mascara="999.999.999-99" tamanho="11" id="cpf"></app-campo-input-mask>
 
-        <app-campo-input label="RG" id="rg" formControlName="rgInscricaoEstadual" class="ui-g-6 ui-md-6 ui-sm-12"
-        [control]="obterControleDoCampo('rgInscricaoEstadual')" mascara="99999999" tamanho="8"></app-campo-input>
+        <app-campo-input-mask label="RG" id="rg" formControlName="rgInscricaoEstadual" class="ui-g-6 ui-md-6 ui-sm-12"
+        [control]="obterControleDoCampo('rgInscricaoEstadual')" mascara="99999999" tamanho="8"></app-campo-input-mask>
     </div>
 
     <div class="ui-g-12">
-        <app-campo-input label="telefone celular" id="telefoneCelular" formControlName="telefonePrincipal"
+        <app-campo-input-mask label="telefone celular" id="telefoneCelular" formControlName="telefonePrincipal"
             class="ui-g-4 ui-md-4 ui-sm-12" [control]="obterControleDoCampo('telefonePrincipal')"
-            mascara="(99) 9 99999999" tamanho="11"></app-campo-input>
+            mascara="(99) 9 9999-9999" tamanho="11"></app-campo-input-mask>
 
-        <app-campo-input label="telefone residencial" id="telefoneResidencial" formControlName="telefoneResidencial"
+        <app-campo-input-mask label="telefone residencial" id="telefoneResidencial" formControlName="telefoneResidencial"
             class="ui-g-4 ui-md-4 ui-sm-12" [control]="obterControleDoCampo('telefoneResidencial')" 
-            mascara="(99) 9999-9999" tamanho="10" [obrigatorio]="false"></app-campo-input>
+            mascara="(99) 9999-9999" tamanho="10" [obrigatorio]="false"></app-campo-input-mask>
 
-        <app-campo-input label="telefone comercial" id="telefoneComercial" formControlName="telefoneComercial"
+        <app-campo-input-mask label="telefone comercial" id="telefoneComercial" formControlName="telefoneComercial"
             class="ui-g-4 ui-md-4 ui-sm-12" [control]="obterControleDoCampo('telefoneComercial')"  
-            mascara="(99) 9999-9999" tamanho="10" [obrigatorio]="false"></app-campo-input>
+            mascara="(99) 9999-9999" tamanho="10" [obrigatorio]="false"></app-campo-input-mask>
     </div>
 
     <div class="ui-g-12">
@@ -37,7 +37,7 @@
                             [control]="obterControleDoCampo('sexo')"></app-campo-dropdown>
 
         <app-campo-input label="e-mail" id="email" formControlName="email" class="ui-g-8 ui-md-8 ui-sm-12"
-            [control]="obterControleDoCampo('email')"></app-campo-input>
+                        [control]="obterControleDoCampo('email')"></app-campo-input>
     </div>
 
 </div>
